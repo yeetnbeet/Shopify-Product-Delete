@@ -1,7 +1,22 @@
 import os ;
 import numpy ;
+import binascii ;
 import shopify ;
 from dotenv import load_dotenv ;
+
+def handshake() :
+    shop_url = "contenderbicycles.myshopify.com"
+    api_version = '2020-10'
+    state = binascii.b2a_hex(os.urandom(15)).decode("utf-8")
+    redirect_uri = "http://myapp.com/auth/shopify/callback"
+    scopes = ['read_products', 'read_orders']
+    
+    newSession = shopify.Session(shop_url, api_version)
+    auth_url = newSession.create_permission_url(scopes, redirect_uri, state)
+
+    return [newSession,auth_url]
+    
+
 
 
 
