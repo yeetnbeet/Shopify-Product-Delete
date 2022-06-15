@@ -1,0 +1,27 @@
+{
+  "name": "productdeleter",
+  "version": "1.0.0",
+  "description": "deletes shopify products",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yeetnbeet/Shopify-Product-Delete.git"
+  },
+  "keywords": [
+    "none"
+  ],
+  "author": "Sam Segal",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yeetnbeet/Shopify-Product-Delete/issues"
+  },
+  "homepage": "https://github.com/yeetnbeet/Shopify-Product-Delete#readme",
+  "dependencies": {
+    "@shopify/shopify-api": "^3.1.3",
+    "axios": "^0.27.2",
+    "express": "^4.18.1"
+  }
+}
