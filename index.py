@@ -4,6 +4,7 @@ import binascii ;
 import shopify ;
 from dotenv import load_dotenv ;
 
+#function returns array containing newSession and auth url
 def handshake() :
     shop_url = "contenderbicycles.myshopify.com"
     api_version = '2021-10'
