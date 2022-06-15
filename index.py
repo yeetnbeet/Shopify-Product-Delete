@@ -15,7 +15,10 @@ def handshake() :
     newSession = shopify.Session(shop_url, api_version)
     auth_url = newSession.create_permission_url(scopes, redirect_uri, state)
 
-    return [newSession,auth_url]
+    access_token = os.getenv("ACCESS_TOKEN")
+    return shopify.Session(shop_url,api_version,access_token)
+
+    
     
 
 
@@ -26,4 +29,5 @@ if __name__ == "__main__" :
     load_dotenv()
     API_KEY = os.getenv("API_KEY")
     API_KEY_SECRET = os.getenv("API_KEY_SECRET")
+    
     print(handshake())
